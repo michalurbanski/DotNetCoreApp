@@ -8,5 +8,10 @@ namespace ConsoleApplication
         {
             Console.WriteLine("Hello World!");
         }
+        
+        public int FirstMethod()
+        {
+            return 1;  
+        }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
+using ConsoleApplication; 
 
 namespace ConsoleApp.Tests
 {
@@ -15,15 +16,24 @@ namespace ConsoleApp.Tests
             Assert.Equal(4, Add(2, 2));
         }
 
-        [Fact]
-        public void FailingTest()
-        {
-            Assert.Equal(5, Add(2, 2));
-        }
+        // [Fact]
+        // public void FailingTest()
+        // {
+        //     Assert.Equal(5, Add(2, 2));
+        // }
 
         int Add(int x, int y)
         {
             return x + y;
+        }
+        
+        [Fact]
+        public void Test_ConsoleApp()
+        {
+            Program program = new Program(); 
+            int returnValue = program.FirstMethod();
+            
+            Assert.True(true);  
         }
     }
 }
